@@ -49,8 +49,7 @@ class _HomepageState extends State<Homepage> {
           : GridView.count(
               crossAxisCount: 3,
               children: pokedex.pokemon
-                  .map((poke) => Padding(
-                        padding: const EdgeInsets.all(2.0),
+                  .map((poke) => InkWell(
                         child: GestureDetector(
                           onTap: () {
                             Navigator.push(
@@ -63,7 +62,7 @@ class _HomepageState extends State<Homepage> {
                           child: Hero(
                             tag: poke.img,
                             child: Card(
-                              elevation: 3.0,
+                              elevation: 1.0,
                               child: Column(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
@@ -78,6 +77,7 @@ class _HomepageState extends State<Homepage> {
                                   Text(poke.name,
                                       style: TextStyle(
                                           fontSize: 13.0,
+                                          color: Colors.black,
                                           fontWeight: FontWeight.bold))
                                 ],
                               ),
@@ -87,11 +87,6 @@ class _HomepageState extends State<Homepage> {
                       ))
                   .toList(),
             ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Colors.red,
-        child: Icon(Icons.refresh),
-      ),
     );
   }
 }
