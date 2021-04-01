@@ -1,5 +1,3 @@
-//created using json to dart tool: https://javiercbk.github.io/json_to_dart/
-
 class Pokedex {
   List<Pokemon> pokemon;
 
