@@ -49,7 +49,7 @@ class _HomepageState extends State<Homepage> {
           : GridView.count(
               crossAxisCount: 3,
               children: pokedex.pokemon
-                  .map((poke) => InkWell(
+                  .map((poke) => GestureDetector(
                         child: GestureDetector(
                           onTap: () {
                             Navigator.push(
@@ -62,7 +62,11 @@ class _HomepageState extends State<Homepage> {
                           child: Hero(
                             tag: poke.img,
                             child: Card(
-                              elevation: 1.0,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              color: Colors.white,
+                              elevation: 3.0,
                               child: Column(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,

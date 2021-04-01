@@ -15,7 +15,7 @@ class PokeDetail extends StatelessWidget {
             top: MediaQuery.of(context).size.height * 0.1,
             child: Card(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
+                borderRadius: BorderRadius.circular(20.0),
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -28,7 +28,7 @@ class PokeDetail extends StatelessWidget {
                           fontSize: 25.0, fontWeight: FontWeight.bold)),
                   Text("#${pokemon.num}"),
                   Text("Height: ${pokemon.height}"),
-                  Text("Height: ${pokemon.weight}"),
+                  Text("Weight: ${pokemon.weight}"),
                   Text("Spawn Chance: ${pokemon.spawnChance}"),
                   Text("Spawn Time: ${pokemon.spawnTime}"),
                   Text("Types", style: TextStyle(fontWeight: FontWeight.bold)),
